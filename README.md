@@ -1,2 +1,1 @@
-not responsive in smaller screens
-
+there are some issues in responsiveness. Will fix ty
