@@ -18,3 +18,4 @@ hamburgerMenu.onclick= function(){
     midBar.classList.toggle('active');
     rightBar.classList.toggle('active');
 }
+

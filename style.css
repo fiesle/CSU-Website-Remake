@@ -813,6 +813,13 @@ footer .card1:nth-child(3){
       font-size: 0.7rem;
       color: rgba(255, 255, 255, 0.755);
     }
+        .hamburger-menu .line {
+          width: 25px;
+          height: 3px;
+          border-radius: 3px;
+          background: white;
+          margin: 6px 0;
+        }
 }
 
 @media only screen and (max-width:600px){

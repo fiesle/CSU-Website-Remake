@@ -11,7 +11,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  height: 3000px;
+  /* height: 3400px; */
   position: relative;
   overflow-x: hidden;
 }
@@ -211,11 +211,17 @@ header {
   width: 100%;
 }
 
+#nextbtn{
+  display: none;
+}
+
 .main{
   width:100vw;
   color:black;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  font-family: 'Poppins',sans-serif;
 }
 
 
@@ -249,7 +255,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height:60px
+  height:60px;
 }
 
 .main-learn-more img{
@@ -267,15 +273,88 @@ header {
   font-weight: 600;
 }
 
+/*CARD SECTION*/
+
+.card-section{
+  margin-top: 70px;
+  background-color:#f7f4f4ea;
+  padding: 100px;
+  margin-bottom: 70px;
+}
+.card-background{
+  width: auto;
+  margin: 0 auto;
+}
+
+.cards-container{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  row-gap: 30px;
+}
+
+
+.card-container{
+  overflow: hidden;
+  width:300px;
+  height:600px;
+  border-radius: 3%;
+  background-color: rgb(253, 253, 253);
+  box-shadow: 5px 5px 10px #6d6b6b;
+}
+
+.card-container:hover{
+  background-color: rgb(230, 227, 227);
+  cursor: pointer;
+}
+
+.card-container:hover img{
+  transform: scale(1.1);
+
+}
+
+.card-container img{
+  transition: 0.125s ease-in-out;
+  width:100%;
+  height:50%;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+}
+
+
+
+.card-container .text-container{
+  color:black;
+  padding:30px;
+}
+.card-container .text-container h6{
+  margin-bottom:5px;
+  color:#DC0000;
+}
+.card-container .text-container h1{
+ font-size: 1.3rem;
+margin-bottom: 5px;
+}
+
+.card-container .text-container p{
+  font-size: 0.8rem;
+  line-height: 25px;
+}
+
+
+
 /*FOOTER SECTION*/
 
 .footer {
-  position: absolute;
+  position: static;
   left:0;
   bottom:0;
   width: 100vw;
   background-color: #061043;
   padding: 50px 50px 20px 50px;
+  font-family: 'Poppins',sans-serif;
 }
 
 footer {
@@ -349,6 +428,117 @@ footer .card1:nth-child(3){
 
 }
 
+.section-title{
+  color: black;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+/*OFFICIALS*/
+.main img{
+  max-width:60%;
+  margin: 0 auto;
+}
+
+/*FACULTY*/
+#nav-active{
+  font-weight: 700;
+}
+
+.table-section{
+  margin: 50px auto;
+  font-family: 'Popppins',sans-serif;
+}
+
+
+table{
+
+  border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table th{
+  background-color: #a00707;
+    color: #ffffff;
+    text-align: left;
+}
+
+table th, td{
+  padding: 15px 25px;
+}
+
+table tbody tr {
+  color:black;
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+ table tbody tr:last-of-type {
+  border-bottom: 2px solid #DC0000;
+}
+ 
+.college-of{
+  background-color: rgb(232, 223, 223);
+  padding:10px;
+  text-align: center;
+}
+
+/*COLLEGE SECTION*/
+.college-section {
+  margin: 50px auto;
+  font-family: 'Popppins', sans-serif;
+}
+
+.hr{
+  margin:0 auto 50px auto;
+  height:3px;
+  width:60%;
+  background-color: black;
+}
+.college-section table th{
+  text-align: center;
+  font-size: 1.2rem;
+}
+.college-section table tr{
+  text-align: left;
+  font-size: 1rem;
+}
+
+
+
+/*COURSE SECTION*/
+.courses-section{
+  padding: 50px;
+  width:100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins',sans-serif;
+}
+
+.courses-section img{
+  max-width: 80%;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+/*CONTACT SECTION*/
+.contact-section{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+
+
 @media only screen and (max-width:1480px) {
 
   .mid-nav {
@@ -415,5 +605,258 @@ footer .card1:nth-child(3){
 
   .right-nav.active .enroll-btn {
     display: none;
+  }
+}
+
+@media only screen and (max-width:1067px){
+
+  .campus-nav ul li a{
+    font-size: 0.8rem;
+  }
+
+    .campus-nav ul li  {
+      margin-right: 22px;
+    }
+  .logo-footer img {
+      display: none;
+    }
+  
+    .footer-content .card1 h3 {
+      margin-bottom: 3px;
+      color: #FFD700;
+      font-size: 1rem;
+    }
+  
+    .footer-content .card1 h6 {
+      font-size: 0.7rem;
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.755);
+      font-weight: 300;
+    }
+  
+    .footer-content .card1:nth-child(3) {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.755);
+    }
+  
+    .hamburger-menu .line {
+      width: 25px;
+      height: 3px;
+      border-radius: 3px;
+      background: white;
+      margin: 6px 0;
+    }
+
+    .hero{
+      height:50vh;
+    }
+
+    .hero-container{
+      flex-direction: column;
+
+    }
+
+    .hero-container h1{
+      font-size: 3.4rem;
+    }
+
+        .hero-container p{
+          font-size: 1.3rem;
+        }
+
+                .main-about-container {
+                  flex-direction: column;
+                }
+        
+                .main-about-container h1 {
+                  font-size: 1.7rem;
+                  margin-bottom: 15px;
+                }
+        
+                .main-about-description {
+                  width: 100%;
+                }
+        
+                .main-about-description p {
+                  font-size: 0.9rem;
+                }
+                .main-learn-more{
+                  width:60%;
+                }
+                .main-learn-more img {
+                  width: 25px;
+                }
+        
+                .main-learn-more p {
+                  font-size: 0.8rem;
+                }
+
+           .section-title {
+              font-size: 2.3rem;
+            }
+            .contact-section h2{
+              font-size: 1rem;
+            }
+      /*OFFICIALS*/
+             .officials-section .main img {
+               min-width: 500px;
+             }
+      /*COLLEGE*/
+            
+            .college-section table th {
+              font-size: 1.2rem;
+            }
+      
+            .college-section table tr {
+              text-align: left;
+              font-size:0.9rem;
+            }
+      
+}
+
+@media only screen and (max-width:600px) {
+.campus-nav ul li:not(:first-child){
+  display: none;
+}
+
+
+#nextbtn{
+  display: block;
+  font-size: 1.5rem;
+}
+
+#campus{
+  display: block;
+}
+  .navbar h1 {
+    font-size: 1.1rem;
+  }
+
+  .navbar h2 {
+    font-size: 1.2rem;
+  }
+
+  .mid-nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  .right-nav {
+    top: 96%;
+  }
+
+
+    .hero-container h1 {
+      font-size: 3.1rem;
+    }
+  
+    .hero-container p {
+      font-size: 1rem;
+    }
+
+        .main-about-container{
+          flex-direction: column;
+        }
+
+        .main-about-container h1{
+          font-size: 1.7rem;
+        }
+        .main-about-description{
+          width:100%;
+        }
+        .main-about-description p{
+          font-size: 0.9rem;
+        }
+.main-learn-more {
+  width: 100%;
+}
+        .main-learn-more img{
+          width: 25px;
+        }
+        .main-learn-more p{
+          font-size: 0.8rem;
+        } 
+        .card-container{
+          width:250px;
+          height:400px;
+        }
+        .card-container .text-container{
+          padding:7px 15px;
+        }
+        .card-container .text-container h6{
+          font-size: 0.6rem;
+        }
+
+       .card-container .text-container h1{
+          font-size:1rem;
+        }
+       .card-container .text-container p{
+        font-size: 0.7rem;
+        line-height: 20px;
+       }
+
+             .footer-content {
+               flex-direction: column;
+               text-align: center;
+             }
+      
+             .campus-description h1 {
+               font-size: 1.7rem;
+             }
+      
+             .card1 {
+               margin-bottom: 5px;
+             }
+      
+             .campuses-title {
+               font-size: 2.1rem;
+             }
+      
+             .campuses p {
+               font-size: 0.6rem;
+             } 
+
+            .section-title {
+                 font-size: 1.8rem;
+              }
+
+.contact-section h2 {
+  font-size: 0.8rem;
+}
+            /*FACULTY*/
+
+            table th{
+              font-size: 0.7rem;
+            }
+            table tr{
+              font-size: 0.6rem;
+            }
+            /*COLLEGE*/
+    
+      
+            .college-section table th {
+              font-size: 0.9rem;
+            }
+      
+            .college-section table tr {
+              text-align: left;
+              font-size: 0.6rem;
+            }
+            /*COURSES*/
+            .college-section table th{
+              text-align: center;
+              font-size:0.9rem;
+        }
+      .college-section table tr{
+               font-size: 0.6rem;
+}
+}
+
+@media only screen and (max-width:480px) {
+  .navbar h1 {
+    display: none;
+  }
+
+  .navbar h2 {
+    font-size: 5rem;
   }
 }
