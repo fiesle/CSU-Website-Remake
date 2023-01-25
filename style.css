@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
+
 *{
   margin:0;
   padding:0;
@@ -10,7 +13,6 @@ body{
   font-family: 'Poppins',sans-serif;
   color:#fff;
   height: 3000px;
-  padding-top: 90px;
   position:relative;
   overflow-x: hidden;
 }
@@ -28,7 +30,7 @@ top:0;
 left:0;
 z-index: 999;
 width:100%;
-box-shadow:  0px 0px 10px 1px #000000
+box-shadow:  0px 0px 10px 1px #000000;
 }
 
 .navbar{
@@ -51,7 +53,7 @@ box-shadow:  0px 0px 10px 1px #000000
   width: 50px;
 }
 
-.navbar h2{
+.navbar h1{
   line-height: 50px;
   font-size: 1.6em;
   margin-left:10px;
@@ -106,7 +108,7 @@ box-shadow:  0px 0px 10px 1px #000000
   position:fixed;
   right:0.5%;
   top:50%;
-  z-index: 1;
+  z-index: -1;
   padding:5px;
   border-radius: 5px;
 }
@@ -206,7 +208,8 @@ box-shadow:  0px 0px 10px 1px #000000
 /*IMAGE SLIDER*/
 
 .image-slide{
-  margin-top:30px;
+  /* margin-top:30px; */
+  margin-top: 130px;
 }
 .image-slider{
   width:100%;
@@ -365,7 +368,7 @@ box-shadow:  0px 0px 10px 1px #000000
 }
 
 .campuses{
-  width:80%;
+  width:70%;
   padding:50px 0;
   text-align: center;
   margin:auto;
@@ -385,11 +388,13 @@ font-size: 3rem;
   margin-top: 3%;
 
   display: flex;
-  justify-content:space-around;
+  justify-content:space-evenly;
   flex-flow: wrap;
 }
 .campus{
-  height: 500px;
+  /* height: 500px; */
+  /* width:27%; */
+  width:400px;
   border-radius: 10px;
   margin-bottom: 30px;
   border: 4px solid #ffffff;
@@ -410,8 +415,8 @@ font-size: 3rem;
   left:0;
   width:100%;
   height:100%;
-  z-index:99;
-  background-color: rgba(0,0,0,0.3);
+  z-index:3;
+  background-color: rgba(0, 0, 0, 0.155);
 } */
 
 .campus-description:hover{
@@ -447,19 +452,21 @@ font-size: 3rem;
     height: 100%;
     transition: 0.475s;
 }
-
+.campus-description h3{
+  color:black;
+}
 
 .campus-description p,h2{
   position: absolute;
   bottom: 0;
   left: 50%;
   opacity: 0;
-  line-height:25px;
+  line-height:21px;
   margin-bottom: 12px;
   width: 90%;
   font-weight: 700;
   color: white;
-  font-size: 0.8em;
+  font-size: 0.7em;
   transform: translateX(-50%);
   transition: 0.475s;
   text-align: justify;
@@ -470,7 +477,7 @@ font-size: 3rem;
 }
 
 .campus-description:hover p {
-  bottom:39%;
+  bottom:23%;
   opacity: 1;
 }
 
@@ -479,7 +486,7 @@ font-size: 3rem;
   bottom: 2%;
   left: 50%;
   opacity:0;
-  padding: 10px 25px;
+  padding: 3px 18px;
   background-color: #ffffff;
     border: none;
   border-radius: 12px;
@@ -496,7 +503,7 @@ font-size: 3rem;
 
 .campus-description:hover .visit-btn{
   opacity:1;
-  bottom:25%;
+  bottom:10%;
 }
 
 .campus-description h1{
@@ -509,19 +516,20 @@ font-size: 3rem;
     font-weight: 700;
     z-index: 4;
     color: white;
-    font-size: 6rem;
+    /* font-size: 3rem; */
+    font-size: 2.8vw;
     text-shadow: 4px 4px 4px rgb(79, 1, 1);
     transform: translate(-50%,-50%);
     transition: 0.5s;
 }
 
-.campus:nth-child(1) h1{
-  font-size: 5.7rem;
+/* .campus:nth-child(1) h1{
+  font-size: 2vw;
 }
 
 .campus:nth-child(4) h1 {
-  font-size: 5.7rem;
-}
+  font-size: 2vw;
+} */
 
 .campus-description:hover h1 {
   opacity: 0;
@@ -626,11 +634,16 @@ font-size: 3rem;
   padding: 50px 50px 20px 50px;
 }
 footer{
-  margin: 0 auto;
-  width:80%;
+margin: 0 auto;
+  max-width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
+}
+footer .footer-content{
+  display: flex;
+  justify-content:space-between;
+
 }
 
 .footer p{
@@ -640,32 +653,55 @@ footer{
   color: rgba(242, 236, 236, 0.623);
 }
 
-footer .card1 .content{
+    .logo-footer img {
+      margin-top: 20px;
+      margin-right: 50px;
+      width: 100px;
+    }
+
+.footer-content .card1{
+  flex:1;
+}
+
+/* footer .card1 {
+  width: 20%;
+}
+
+footer .card1:nth-child(3){
+  width:30%;
+} */
+.footer-content .card1 .content{
   margin-bottom: 15px;
 }
 
-footer .card1 h3{
+.footer-content .card1 h3{
   margin-bottom:3px;
   color:#FFD700;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
-footer .card1 h6{
-  font-size: 1.1rem;
-  margin-bottom: 3px;
-  color: rgba(242, 236, 236, 0.623);
+.footer-content .card1 h6{
+  font-size: 0.7rem;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.755);
   font-weight: 300;
 }
 
-footer .card1 img{
-  width:13px;
+.footer-content .card1:nth-child(3) {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.755);
+  
+}
+.footer-content .card1:nth-child(3) .inner-content{
+  margin-bottom: 10px;
+}
+.footer-content .card1 img{
+  width:10px;
   margin-right:5px;
+
 }
 
- footer .card1 .content .logo-footer{
-  margin-top:20px;
-  width:300px;
-}
+
 
 /*MEDIA QUERIES*/
 
@@ -746,6 +782,101 @@ footer .card1 img{
   }
 }
 
+@media only screen and (max-width:1067px){
+  .campuses-title{
+    font-size: 2.5rem;
+  }
+    .campus-description h1 {
+      font-size: 2.3rem
+    }
+  .campuses p{
+    font-size: 0.8rem;
+  }
+  .logo-footer  img {
+      display: none;
+    }
+  
+    .footer-content .card1 h3 {
+      margin-bottom: 3px;
+      color: #FFD700;
+      font-size: 1rem;
+    }
+  
+    .footer-content .card1 h6 {
+      font-size: 0.7rem;
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.755);
+      font-weight: 300;
+    }
+  
+    .footer-content .card1:nth-child(3) {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.755);
+    }
+}
+
+@media only screen and (max-width:600px){
+  
+  .navbar h1{
+    font-size: 1.1rem;
+  }
+    .navbar h2 {
+      font-size: 1.2rem;
+    }
+.mid-nav ul li a {
+  font-size: 1.2rem;
+}
+  .right-nav{
+    top: 96%;
+  }
+
+.floating-left-nav img {
+  width: 25px;
+}
+  .enroll-btn, .enroll-btn1{
+    font-size: 0.7em;
+  }
+  .enroll-btn{
+    padding:5px 15px;
+  } 
+  
+    .enroll-btn1 {
+      padding: 5px 13px;
+    }
+    .visit-btn{
+      opacity: 1;
+      padding: 3px 10px;
+      font-size: 0.7rem;
+    }
+  .footer-content{
+    flex-direction: column;
+    text-align: center;
+  }
+  .campus-description h1{
+    font-size: 1.7rem;
+  }
+  .card1{
+    margin-bottom: 5px;
+  }
+
+    .campuses-title {
+      font-size: 2.1rem;
+    }
+  
+    .campuses p {
+      font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width:480px){
+  .navbar h1{
+    display: none;
+  }
+    .navbar h2 {
+      font-size: 5rem;
+    }
+}
+
 @media only screen and (max-width:823px) {
   .mid-nav{
     position: absolute;
@@ -797,18 +928,11 @@ footer .card1 img{
   }
 } */
 
-@media only screen and (max-width:585px) {
-  
-  .navbar h2 {
-    font-size: 1.2rem;
-  }
-}
 
-@media only screen and (max-width:480px) {
-  .navbar h2 {
-    font-size: 5rem;
-  }
-}
+
+
+
+
 
 
 
