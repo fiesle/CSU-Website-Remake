@@ -437,7 +437,7 @@ footer .card1:nth-child(3){
 
 /*OFFICIALS*/
 .main img{
-  max-width:60%;
+  max-width:80%;
   margin: 0 auto;
 }
 
@@ -453,10 +453,8 @@ footer .card1:nth-child(3){
 
 
 table{
-
   border-collapse: collapse;
     margin: 0 auto;
-    font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -466,6 +464,7 @@ table th{
   background-color: #a00707;
     color: #ffffff;
     text-align: left;
+    font-size: 1.2rem;
 }
 
 table th, td{
@@ -475,6 +474,7 @@ table th, td{
 table tbody tr {
   color:black;
   border-bottom: 1px solid #dddddd;
+  font-size: 1rem;
 }
 
 table tbody tr:nth-of-type(even) {
@@ -526,7 +526,7 @@ table tbody tr:nth-of-type(even) {
 }
 
 .courses-section img{
-  max-width: 80%;
+  max-width: 90%;
   min-width: 400px;
   margin: 0 auto;
 }
@@ -701,8 +701,17 @@ table tbody tr:nth-of-type(even) {
              .officials-section .main img {
                min-width: 500px;
              }
+      /*FACULTY*/
+            .table-section th {
+              font-size: 1.2rem;
+            }
+      
+             .table-section tr {
+              text-align: left;
+              font-size: 0.9rem;
+            }
       /*COLLEGE*/
-            
+
             .college-section table th {
               font-size: 1.2rem;
             }
@@ -824,27 +833,18 @@ table tbody tr:nth-of-type(even) {
 }
             /*FACULTY*/
 
-            table th{
+            .table-section th{
               font-size: 0.7rem;
             }
-            table tr{
+            .table-section tr{
               font-size: 0.6rem;
             }
             /*COLLEGE*/
-    
-      
-            .college-section table th {
-              font-size: 0.9rem;
-            }
-      
-            .college-section table tr {
-              text-align: left;
-              font-size: 0.6rem;
-            }
+             
+        
             /*COURSES*/
             .college-section table th{
-              text-align: center;
-              font-size:0.9rem;
+              font-size:0.7rem;
         }
       .college-section table tr{
                font-size: 0.6rem;

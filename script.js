@@ -19,3 +19,25 @@ hamburgerMenu.onclick= function(){
     rightBar.classList.toggle('active');
 }
 
+/*MISSION SLIDER*/
+
+// const nextArrow = document.querySelector(".nextBtn");
+// let i =0;
+
+
+// nextArrow.onclick= function(){
+
+//     const containerCurrent = document.querySelector(".mission"+i);
+//     const containerNext=document.querySelector(".mission"+(++i));
+//     containerNext.classList.toggle('active');
+//     console.log(i);
+  
+
+//     if(i==1){
+//         containerNext.classList.toggle('active');
+//     }
+//     if(i>3){
+//         i=0;
+//     }
+// }
+    
