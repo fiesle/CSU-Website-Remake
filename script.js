@@ -19,6 +19,7 @@ hamburgerMenu.onclick= function(){
     rightBar.classList.toggle('active');
 }
 
+
 /*MISSION SLIDER*/
 
 // const nextArrow = document.querySelector(".nextBtn");
