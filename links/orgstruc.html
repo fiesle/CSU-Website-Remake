@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSU Andrews</title>
-    <link rel="stylesheet" href="../style.css" />
+    <title>CSU Organizational Structure</title>
+    <link rel="stylesheet" href="/links/style.css" />
+    <script src="../script.js" defer></script>
   </head>
   <body>
     
@@ -14,7 +15,6 @@
     
 <section class="body">
     <section class="hero">
-
        <header class="header">
       <nav class="navbar">
         <div class="left-nav nav">
@@ -34,8 +34,8 @@
             <li><a href="/links/admin.html">administration</a></li>
             <li><a href="#">academics</a></li>
             <li><a href="/campuses-page/andrews/andrews.html">campuses</a></li>
-            <li><a href="/links/admission.html">admissions</a></li>
-            <li><a href="/links/contact.html">contact us</a></li>
+            <li><a href="admission.html">admissions</a></li>
+            <li><a href="contact.html">contact us</a></li>
           </ul>
         </div>
         <!-- <div class="left-socials">
@@ -51,7 +51,7 @@
     </header>
     
       <div class="hero-container">
-        <h1>Andrews</h1>
+        <h1>Organizational Structure</h1>
         <div class="hero-text">
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
@@ -64,24 +64,34 @@
     </section>
 
     <section class="campus-nav">
-      <ul>
-        <li><a id="campus" href=""> ANDREWS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a></li>
-        <li><a href="officials.html" id="nav-active">Officials</a></li>
-        <li><a href="faculty.html" >Faculty</a></li>
-        <li><a href="colleges.html">Colleges</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="andrews.html">Contact</a></li>
-      </ul>
-      <a href="faculty.html"><p id="nextbtn">>></p></a>
-    </section>
+        <ul>
+          <li><a id="campus" href="andrews.html"> ORGANIZATIONAL...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</a></li>
+          <li><a href="admin.html">Administration</a></li>
+          <li><a href="memo.html">Memorandum</a></li>
+          <li><a href="officials.html">Officials</a></li>
+        </ul>
+        <a href="memo.html"><p id="nextbtn">>></p></a>
+      </section>
 
-
-    <!--MAIN SECTION-->>
-    
     <section class="main">
-      <h1 class="section-title">OFFICIALS</h1>
-      <div class="hr"></div>
-      <img src="/images/andrews-campus-officials.jpg" alt="">
+        <div class="main-container">
+            <div class="main-nav">
+                <ul>
+                    <li data-tab-target="#structure" class="active">ORGANIZATIONAL STRUCTURE</li>
+                    <li data-tab-target="#chart">ORGANIZATIONAL CHART</li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div id="structure" class="main-tab active">
+                    <h1>University Organizational Structure</h1>
+                    <img src="images/org-struc.jpg" alt="">
+                </div>
+                <div id="chart"  class="main-tab">
+                    <h1>Organizational Chart</h1>
+                    <img src="images/org-chart.jpg" alt="">
+                </div>
+            </div>
+        </div>
     </section>
 
   <!--Footer Section-->
@@ -162,7 +172,6 @@
       &lt&gtMark Angelo Manuel, Louie Justin Saturno, Charls Dave Recto&lt/&gt
     </p>
   </section>
-
    
     <script src="/script.js"></script>
   </body>

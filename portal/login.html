@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSU Portal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="main-home">
+      <div class="left">
+        <div class="form">
+          <img class="logo" src="/images/logo.png" alt="logo of CSU" />
+          <h1>Welcome CSUan, good day!</h1>
+          <p>Login to your account.</p>
+          <div class="signinBtn">
+            <img src="/images/google.png" alt="" />
+            <p>Sign in with google</p>
+          </div>
+          <p>or login using your portal account</p>
+          <div class="user-detail">
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="username" required />
+          </div>
+          <div class="user-detail">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="password"
+              required
+            />
+          </div>
+
+          <div class="checkbox">
+            <div class="remember">
+              <input id="checkbox" type="checkbox" />
+              <label for="checkbox">Remember for 30 days</label>
+            </div>
+            <p>Forgot password</p>
+          </div>
+          <a class="toPortal" href=""
+            ><div class="sign-in">
+              <button class="signIn-btn" onclick="signIn();">Sign in</button>
+            </div></a
+          >
+          <p class="no-account">
+            Don't have an account?
+            <a href="/links/contact.html" target="_blank"
+              ><span>Contact us.</span></a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="right"></div>
+    </section>
+    <script src="/script.js"></script>
+  </body>
+</html>

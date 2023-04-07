@@ -19,26 +19,85 @@ hamburgerMenu.onclick= function(){
     rightBar.classList.toggle('active');
 }
 
-
-/*MISSION SLIDER*/
-
-// const nextArrow = document.querySelector(".nextBtn");
-// let i =0;
+/*TABBED PANE*/
+const tabs = document.querySelectorAll('[data-tab-target]');
+const mainTabs = document.querySelectorAll('.main-tab');
 
 
-// nextArrow.onclick= function(){
+tabs.forEach(tab=>{
+    tab.addEventListener('click', () => {
+        midBar.classList.remove('active');
+        //Tab content
+        const target = document.querySelector(tab.dataset.tabTarget);
+        mainTabs.forEach(mainTab=>mainTab.classList.remove('active'));
 
-//     const containerCurrent = document.querySelector(".mission"+i);
-//     const containerNext=document.querySelector(".mission"+(++i));
-//     containerNext.classList.toggle('active');
-//     console.log(i);
-  
+        //List
+        tabs.forEach(tab=>{
+            tab.classList.remove('active');
+        })
 
-//     if(i==1){
-//         containerNext.classList.toggle('active');
-//     }
-//     if(i>3){
-//         i=0;
-//     }
-// }
+        
+
+        target.classList.add('active');
+        tab.classList.add('active');
+    })
+})
+
+/*GENERATE DOCUMENT*/
+
+function getDoc(){
+    const doc = document.getElementById("type").value;
+    const generateSpan = document.querySelector('.data-holder');
+
+    generateSpan.textContent=doc;
+}
+
+/*CHANGE PASSWORD SUCCESSFULLY*/
+function showSuccess(){
+    const span = document.querySelector('.success');
+    const prevPass = document.getElementById('current');
+    const newPass = document.getElementById('new');
+
+    if(prevPass.value=="" || newPass.value==""){
+        alert("PLEASE COMPLETE YOUR INPUT!");
+    }
+    else
+        span.textContent=" SUCCESS! "
+}
+
+/*SIGN IN*/
+function signIn(){
+    const user = document.getElementById('username');
+    const pass = document.getElementById('password');
+    const toPortal = document.querySelector('.toPortal');
+
+    if(user.value=="" || pass.value==""){
+        alert("PLEASE COMPLETE YOUR INPUT!");
+    }
+    else{
+        toPortal.href="portal-main.html";
+
+    }
+}
+
+
+/*TO TOP BUTTON HOME PAGE*/
+let topBtn = document.getElementById("toTop-btn");
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+}
+
+function toTop() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
     

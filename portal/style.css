@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+html{
+    height:100%;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    position: relative;
+    min-height:100%;
+    display: flex;
+    flex-direction: column;
+}
+.portal-body{
+    background-color: #ebe2e2;
+}
+a{
+    text-decoration: none;
+    color:white
+}
+
+/*HEADER*/
+header{
+    background-color: #a00707;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+    width:100%;
+    box-shadow:  0px 0px 10px 1px #000000;
+    }
+    
+    .navbar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      padding: 10px;
+      width:90%;
+    }
+    
+    
+    .left-nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .navbar .logo {
+      width: 50px;
+    }
+    
+    .navbar h1{
+      line-height: 50px;
+      font-size: 1.6em;
+      margin-left:10px;
+      color: #fff;  
+      font-family: 'Oswald',sans-serif;
+      letter-spacing:2px;
+    }
+    
+    
+    /*HAMBURGER MENU*/
+    .hamburger-menu{
+      display:none;
+    }
+
+.right-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.right-nav .circle{
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color: rgb(39, 241, 39);
+}
+.right-nav p {
+    color:white;
+    font-size: 1.1rem;
+}
+.right-nav img{
+    width:70px;
+    border-radius: 50%;
+    border: 3px solid #f9fafe;
+    
+}
+.right-nav:hover{
+    cursor: pointer;
+}
+
+.main-home{
+    display: flex;
+
+    height:100vh;
+}
+.left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left .form{
+    margin: 0 auto;  
+    max-width:500px;
+}
+
+.left .form h1{
+    font-size: 2.1rem;
+    color:#a00707;
+}
+.left .form p{
+    margin-bottom:20px;
+    font-size: 1.2rem;
+}
+.left .logo{
+    width:60px;
+    margin-bottom: 30px;
+}
+.left .form  .signinBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    font-weight: 500;
+    border: 1px solid rgb(219, 213, 213);
+    border-radius: 8px;
+    column-gap: 3px;
+    margin-bottom:20px; 
+}
+
+.left .form  .signinBtn:hover{
+    background-color: #f3ecec;
+    cursor: pointer;
+}
+.left .signinBtn img{
+    width:30px;
+    height:30px;
+}
+.left .form .signinBtn p{
+    margin-bottom:0px;
+    font-size: 1.1rem;
+}
+
+.left .form p:nth-child(5), .no-account {
+    font-size: 0.9rem;
+    text-align: center;
+    color:rgb(177, 172, 172);
+    position: relative;
+}
+
+.left .form p:nth-child(5)::before{
+    content: "";
+    position:absolute;
+    top:50%;
+    left:0;
+    width: 115px;
+    height:2px;
+    background-color: black;
+}
+
+.left .form p:nth-child(5)::after{
+    content: "";
+    position:absolute;
+    top:50%;
+    right:0;
+    width: 115px;
+    height:2px;
+    background-color: black;
+}
+.left .form .checkbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:25px;
+}
+.left .form .checkbox p{
+    font-size: 1rem;
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+
+.left .form .checkbox p:hover{
+    color:#061043;
+    cursor: pointer;
+}
+.left .user-detail {
+    margin-bottom:20px;
+}
+.left .user-detail label{
+font-size: 1.3rem;
+}
+.left .user-detail input{
+    width:100%;
+    padding:15px;
+    font-size: 1.2rem;
+}
+
+.left .signIn-btn{
+    width:100%;
+    background-color: #061043;
+    color:white;
+    padding:15px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.225ss;
+    margin-bottom:25px;
+    border: none;
+}
+.left .signIn-btn:hover{
+    background-color: #061043e4;
+    cursor: pointer;
+}
+
+.left .form .no-account{
+font-size: 0.8rem;
+}
+.left .form .no-account span{
+    color: #061043;
+    font-weight: 500;
+}
+
+.left .form .no-account span:hover{
+    cursor: pointer;
+}
+.right{
+    width:50%;
+    background-image: linear-gradient(rgba(91, 21, 5, 0.7), rgba(26, 36, 91, 0.7)), url(/campuses/campus-bg.jpg);
+    background-size: cover;
+}
+
+/*MAIN PORTAL*/
+
+.main-tab{
+    display: none;
+    margin-bottom:40px;
+    padding:10px 0;
+  }
+  
+  .main-tab.active{
+    display: block;
+  }
+
+.main{
+    margin: 0 auto;
+    width:80%;
+    background-color: #061043;
+    margin-top:100px;
+    margin-bottom:30px;
+}
+.main{
+   border-radius: 30px;
+}
+.main .navigation-container{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .navigation-container ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.main .navigation-container ul li{
+    color:white;
+    line-height: 80px;
+    font-size: 1.2rem;
+    transition: 0.225s;
+    text-transform:uppercase;
+    position: relative;
+
+}
+.mid-nav ul li.active::before{
+    opacity: 1;
+}
+.mid-nav ul li::before{
+    content: ">";
+    position: absolute;
+    top:0px;
+    left:-10px;
+    width:0;
+    opacity: 0;
+    background-color: white;
+    height:1px;
+
+}
+.mid-nav ul li:hover::before{
+    opacity: 1;
+}
+/* .mid-nav ul li::after{
+    content: "";
+    position: absolute;
+    bottom:20px;
+    left:0;
+    width:0;
+    background-color: white;
+    height:1px;
+    transition: 0.225s;
+  } */
+.main .navigation-container ul li:hover{
+    cursor: pointer;
+    color: #e8d0d0;
+}
+/* .main .navigation-container ul li:hover::after{
+    width:100%;
+} */
+
+.main-contents{
+    padding: 0 30px;
+}
+
+.main-contents .content-title{
+    text-align: center;
+    margin-bottom:30px;
+}
+.main-contents{
+    overflow-x: auto;
+}
+.main-contents table{
+    width:80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    overflow-x: auto;
+
+
+    box-shadow: 0 0 10px rgb(194, 191, 191);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.main-contents table thead tr {
+    text-transform: uppercase;
+    color: rgb(4, 86, 4);
+    font-size: 1.3rem;
+}
+.main-contents table tbody tr:nth-child(even){
+    background-color: rgb(239, 244, 245);
+}.main-contents table tbody tr:nth-child(odd){
+    background-color: rgb(253, 253, 253);
+}
+.main-contents table tbody tr{
+    text-transform: capitalize;
+}
+.main-contents table tbody tr td:nth-child(1){
+    color:green;
+}
+
+.main-contents table td{
+    padding:15px 10px;
+}
+
+.main-tab:nth-child(3) .enrollment-container{
+    margin:0 auto;
+    display: flex;
+    width:80%;
+    row-gap: 20px;
+    flex-flow: wrap;
+    justify-content:center ;
+}
+.main-tab:nth-child(3) .right-section{
+    border-left: 1px solid rgb(181, 175, 175);
+    padding-left:10px;
+}
+.main-tab:nth-child(3) .card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:0 auto;
+    width:300px;
+    background-color: #a00707;
+    border-radius: 15px;
+}
+
+.main-tab:nth-child(3) .card img{
+ width:100%;
+ margin-bottom:10px;
+ border-top-left-radius: 15px;
+ border-top-right-radius: 15px;
+}
+.main-tab:nth-child(3) .card .text-container{
+    padding:5px 15px;
+    color:white;
+    margin-bottom:10px;
+}
+.main-tab:nth-child(3) .card .text-container h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.main-tab:nth-child(3) .card .text-container .status{
+    display: flex;
+    align-items: center;
+}
+.main-tab:nth-child(3) .card .text-container .circle{
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background-color: rgb(39, 241, 39);
+    margin-right:5px;
+}
+ #forth .content-title{
+    text-align: center ;
+    margin-bottom:30px;
+}
+.main-tab .select-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fcf6f6;
+    min-width:500px;
+    width:600px;
+    padding: 50px 0;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 5px 5px 40px rgb(179, 176, 176);
+}
+.main-tab .select-section h3{
+    margin-bottom:15px;
+}
+.main-tab .select-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    width:350px;
+    box-shadow: 0 0 10px rgb(179, 176, 176);
+}
+
+.main-tab .select-container{
+    margin-bottom:30px;
+}
+.main-tab .select-container select:hover{
+    cursor: pointer;
+}
+.main-tab .select-container select {
+    padding:20px;
+    border: none;
+    color:black;
+    background-color: white;
+    font-size: 1.1rem;
+    flex: 1;
+  
+}
+
+.main-tab  .select-container::after{
+    content: "\25BC";
+    position: absolute;
+    right:0;
+    top:0;
+    color:white;
+    background-color: #061043;
+    cursor: pointer;
+    height:100%;
+    padding: 0 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    font-size: 1.5rem;
+    line-height: 60px;
+    transition: 0.225s;
+}
+.main-tab  .select-container:hover::after{
+    background-color: #1f2b65;
+}
+
+.select-section button{
+    margin-top: 40px;
+    width:80%;
+    padding:10px;
+    background: #061043;
+    color:white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+transition: 0.225s;
+}
+.select-section button:hover{
+    cursor: pointer;
+    background-color: #1f2b65;
+}
+
+
+
+/*FIFTH*/
+#fifth .content-title{
+    text-align: center;
+    margin-bottom:30px;
+}
+#fifth .account-container{
+    width:80%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    row-gap: 40px;
+}
+
+#fifth .account-container .account1{
+    padding-right:10px;
+    margin-right: 10px;
+}
+#fifth .account-container .account1 h1{
+    font-size: 1.2rem;
+    margin-bottom:10px;
+}
+
+#fifth .account-container .account1 p{
+    margin-bottom: 5px;
+    margin-left:10px;
+}
+
+#fifth .account-container .account2{
+    width:400px;
+    padding-left:15px;
+    border-left: 1px solid rgb(181, 175, 175);
+}
+footer{
+    margin-top: auto;
+}
+footer .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding:30px 0;
+    background-color: #061043;
+    color:white;
+}
+
+/*SIXTH*/
+#sixth{
+    min-width:500px;
+    padding: 50px 0;
+    margin: 0 auto;
+    background-color: #fcf6f6;
+    position: relative;
+    box-shadow: 5px 5px 40px rgb(179, 176, 176);
+}
+#sixth .content-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#sixth .password-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#sixth .password-container h3{
+    margin-bottom:5px;
+}
+#sixth .password-container input{
+    margin-bottom:10px;
+    padding:10px 20px;
+    width:350px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 0 10px rgb(179, 176, 176);
+    font-family: 'Poppins',sans-serif;
+    font-size: 1rem;
+}
+#sixth button  {
+    margin-top: 40px;
+    width:80%;
+    padding:10px;
+    background: #061043;
+    color:white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+transition: 0.225s;
+}
+#sixth button:hover{
+    cursor: pointer;
+    background-color: #1f2b65;
+}
+
+/*----------MEDIA QUERIES-----------------------*/
+
+@media only screen and (max-width:1300px){
+    .navbar h1{
+        font-size: 1.2rem;
+    }
+.right-nav img{
+    width:40px;
+}
+.right-nav .circle{
+    width:5px;
+    height:5px;
+}
+.right-nav p{
+    font-size: 0.7rem;
+}
+    .mid-nav  ul {
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: block;
+        align-self: flex-start;
+    }
+    .hamburger-menu:hover{
+        cursor: pointer;
+    }
+    .hamburger-menu .line {
+        width: 35px;
+        height: 5px;
+        border-radius: 3px;
+        background: white;
+        margin: 6px 0;
+      }
+
+.navigation-container{
+    position: relative;
+}
+
+.mid-nav {
+    border-radius: 30px;
+    text-align: center;
+    width: 80vw;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #061043;
+    z-index: -1;
+    transition: 0.2s;
+}
+.mid-nav ul {
+        display: block;
+        width: fit-content;
+        margin: 70px auto 0 auto;
+        opacity: 0;  
+        padding-top: 80px;
+        flex-direction: column;
+        row-gap: 30px;
+      }
+
+
+      .mid-nav.active {
+        height: 100vh;
+        /* left: 0; */
+        top: 40px;
+        left:0;
+        z-index: 99;
+      }
+    
+      .mid-nav.active ul {
+        opacity: 1;
+      }
+
+/*TABLE*/
+.main-contents table thead tr{
+    font-size: 1.1rem;
+}
+.main-contents table tbody tr{
+    font-size: 0.8rem;
+}
+}
+
+@media only screen and (max-width:986px){
+    .navbar h1{
+        display: none;
+    }
+    .main{
+        justify-content: center;
+        align-items: center;
+    }
+    .left{
+        width: 90%;
+        margin:0 auto;
+    }
+    .main .form{
+        min-width: 430px;
+    }
+    .right{
+        display: none;
+    }
+
+    .main-tab:nth-child(3) .card{
+        margin-bottom:30px;
+    }
+    .main-tab:nth-child(3) .card .text-container h3{
+        font-size: 1rem;
+        margin-bottom:5px;
+    }
+    .main-tab:nth-child(3) .card .text-container .circle{
+        width:8px;
+        height:8px;
+    }
+    .main-tab:nth-child(3) .right-section h3{
+        font-size: 1rem;
+    }
+    .main-tab:nth-child(3) p{
+        font-size: 0.9rem;
+    }
+    footer .footer-content{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width:486px){
+    
+    .main .left h1{
+        font-size: 1.3rem;
+    }
+    .left .form h1{
+        font-size: 2.1rem;
+        color:#a00707;
+    }
+    .left .form p{
+        font-size: 1rem;
+    }
+    .left .form  .signinBtn{
+        height:40px;
+    }
+    .left .form  .signinBtn img{
+        width:20px;
+        height:20px;
+    }
+    .left .form .signinBtn p{
+        font-size: 0.9rem;
+    }
+    .left .form .user-detail label{
+        font-size: 1rem;
+    }
+    .left .form .user-detail input{
+        padding: 8px;
+        font-size: 1rem;
+    }
+    .left .form p:nth-child(5), .no-account {
+        font-size: 0.8rem;
+    }
+    .left .sign-in{
+        padding:10px;
+        font-size: 1rem;
+    }
+        .left .signIn-btn{
+            font-size: 0.8rem;
+        }
+    .left .form p:nth-child(5)::before{
+        display:none;
+    }
+    .left .form p:nth-child(5)::after{
+        display:none;
+    }
+
+    /*SIXTH*/
+    #sixth {
+        min-width: 400px;
+    }
+    #sixth .password-container h3{
+        margin-bottom:5px;
+        font-size: 0.9rem;
+    }
+    #sixth button{
+        padding:15px;
+        font-size: 0.9rem;
+    }
+    footer .footer-content{
+        font-size: 0.7rem;
+    }
+}
